@@ -180,252 +180,55 @@
       75% { transform: translateY(-15px) rotate(-5deg); opacity: 0.12; }
     }
 
-    /* ლოგოს სტილები Header-სთვის */
+    /* ლოგოს სტილები Header-სთვის - M სახაზავი */
     .header-logo-container {
       display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .header-logo-compass {
-      width: 45px;
-      height: 45px;
-      position: relative;
-      flex-shrink: 0;
+      align-items: flex-end;
+      gap: 8px;
     }
 
     .header-logo-text-group {
       display: flex;
       flex-direction: column;
+      margin-bottom: 4px;
+    }
+
+    .header-logo-azomva {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: #d4a056;
+      margin-bottom: 0;
     }
 
     .header-logo-main-text {
-      font-family: 'Times New Roman', Georgia, serif;
       font-size: 18px;
-      font-weight: bold;
-      line-height: 1;
-      letter-spacing: 1.5px;
-      color: #8d6640;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #d4a056;
     }
 
     .header-logo-subtitle {
-      font-family: 'BPG Nino Mtavruli', 'Sylfaen', Arial, sans-serif;
-      font-size: 7px;
-      color: #8d6640;
-      letter-spacing: 0.5px;
-      margin-top: 4px;
-      padding-top: 4px;
-      border-top: 0.5px solid #c49a6c;
-      font-style: italic;
+      display: none;
     }
 
     @media (max-width: 768px) {
-      .header-logo-compass {
-        width: 35px;
-        height: 35px;
+      .header-logo-azomva {
+        font-size: 11px;
+        letter-spacing: 4px;
       }
-
+      
       .header-logo-main-text {
         font-size: 14px;
       }
-
-      .header-logo-subtitle {
-        font-size: 6px;
-      }
     }
 
-    .header-compass-outer {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: repeating-radial-gradient(circle, 
-        rgba(249, 246, 240, 0.6) 0px, 
-        rgba(249, 246, 240, 0.6) 1px, 
-        rgba(245, 237, 224, 0.5) 1px, 
-        rgba(245, 237, 224, 0.5) 2px);
-      border: 2px double #c49a6c;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .header-compass-ring {
-      position: absolute;
-      width: 35px;
-      height: 35px;
-      border: 0.5px dashed #d4a37380;
-      border-radius: 50%;
-    }
-
-    .header-tick {
-      position: absolute;
-      background: #333;
-      top: 50%;
-      left: 50%;
-      transform-origin: center;
-    }
-
-    .header-tick-main {
-      width: 1px;
-      height: 7px;
-      margin-left: -0.5px;
-    }
-
-    .header-tick-mid {
-      width: 0.75px;
-      height: 5px;
-      margin-left: -0.375px;
-    }
-
-    .header-tick-minor {
-      width: 0.5px;
-      height: 3px;
-      margin-left: -0.25px;
-    }
-
-    .header-tick:nth-child(1) { transform: translate(-50%, -50%) translateY(-19.5px); }
-    .header-tick:nth-child(2) { transform: translate(-50%, -50%) rotate(22.5deg) translateY(-19.5px); }
-    .header-tick:nth-child(3) { transform: translate(-50%, -50%) rotate(45deg) translateY(-19.5px); }
-    .header-tick:nth-child(4) { transform: translate(-50%, -50%) rotate(67.5deg) translateY(-19.5px); }
-    .header-tick:nth-child(5) { transform: translate(-50%, -50%) rotate(90deg) translateY(-19.5px); }
-    .header-tick:nth-child(6) { transform: translate(-50%, -50%) rotate(112.5deg) translateY(-19.5px); }
-    .header-tick:nth-child(7) { transform: translate(-50%, -50%) rotate(135deg) translateY(-19.5px); }
-    .header-tick:nth-child(8) { transform: translate(-50%, -50%) rotate(157.5deg) translateY(-19.5px); }
-    .header-tick:nth-child(9) { transform: translate(-50%, -50%) rotate(180deg) translateY(-19.5px); }
-    .header-tick:nth-child(10) { transform: translate(-50%, -50%) rotate(202.5deg) translateY(-19.5px); }
-    .header-tick:nth-child(11) { transform: translate(-50%, -50%) rotate(225deg) translateY(-19.5px); }
-    .header-tick:nth-child(12) { transform: translate(-50%, -50%) rotate(247.5deg) translateY(-19.5px); }
-    .header-tick:nth-child(13) { transform: translate(-50%, -50%) rotate(270deg) translateY(-19.5px); }
-    .header-tick:nth-child(14) { transform: translate(-50%, -50%) rotate(292.5deg) translateY(-19.5px); }
-    .header-tick:nth-child(15) { transform: translate(-50%, -50%) rotate(315deg) translateY(-19.5px); }
-    .header-tick:nth-child(16) { transform: translate(-50%, -50%) rotate(337.5deg) translateY(-19.5px); }
-
-    .header-n {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Times New Roman', serif;
-      font-size: 16px;
-      font-weight: 900;
-      color: #8d6640;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-      z-index: 20;
-    }
-
-    .header-cardinal {
-      position: absolute;
-      font-family: 'Times New Roman', serif;
-      font-size: 5px;
-      font-weight: 600;
-      color: #333;
-      z-index: 15;
-    }
-
-    .header-cardinal-e { right: 1px; top: 50%; transform: translateY(-50%); }
-    .header-cardinal-s { bottom: 1px; left: 50%; transform: translateX(-50%); }
-    .header-cardinal-w { left: 1px; top: 50%; transform: translateY(-50%); }
-
-    .header-secondary {
-      position: absolute;
-      font-family: 'Times New Roman', serif;
-      font-size: 4px;
-      font-weight: 600;
-      color: #999;
-      z-index: 15;
-    }
-
-    .header-secondary-ne { top: 7px; right: 7px; }
-    .header-secondary-se { bottom: 7px; right: 7px; }
-    .header-secondary-sw { bottom: 7px; left: 7px; }
-    .header-secondary-nw { top: 7px; left: 7px; }
-
-    .header-rose {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .header-petal {
-      position: absolute;
-      width: 10px;
-      height: 15px;
-      background: linear-gradient(to bottom, #d4a373, transparent);
-      opacity: 0.3;
-      top: 50%;
-      left: 50%;
-      transform-origin: 50% 100%;
-    }
-
-    .header-petal:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
-    .header-petal:nth-child(2) { transform: translate(-50%, -100%) rotate(45deg); }
-    .header-petal:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg); }
-    .header-petal:nth-child(4) { transform: translate(-50%, -100%) rotate(135deg); }
-    .header-petal:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); }
-    .header-petal:nth-child(6) { transform: translate(-50%, -100%) rotate(225deg); }
-    .header-petal:nth-child(7) { transform: translate(-50%, -100%) rotate(270deg); }
-    .header-petal:nth-child(8) { transform: translate(-50%, -100%) rotate(315deg); }
-
-    .header-needle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 0;
-      height: 0;
-      border-left: 3px solid transparent;
-      border-right: 3px solid transparent;
-      border-bottom: 17.5px solid #d4a373;
-      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
-      z-index: 8;
-    }
-
-    .header-needle-back {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(180deg);
-      width: 0;
-      height: 0;
-      border-left: 2.5px solid transparent;
-      border-right: 2.5px solid transparent;
-      border-bottom: 10px solid #999;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
-      opacity: 0.6;
-      z-index: 7;
-    }
-
-    .header-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 4px;
-      height: 4px;
-      background: #8d6640;
-      border-radius: 50%;
-      z-index: 10;
-    }
-
-    /* About სექციის ლოგო */
-    /* About სექციის ლოგო */
+    /* About სექციის ლოგო - M სახაზავი */
     .about-logo-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
-    }
-
-    .about-logo-compass {
-      width: 200px;
-      height: 200px;
-      position: relative;
-      flex-shrink: 0;
     }
 
     .about-logo-text-group {
@@ -434,316 +237,43 @@
       align-items: center;
     }
 
+    .about-logo-azomva {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      color: #d4a056;
+      margin-bottom: 0;
+    }
+
     .about-logo-main-text {
-      font-family: 'Times New Roman', Georgia, serif;
-      font-size: 42px;
-      font-weight: bold;
-      line-height: 1;
-      letter-spacing: 3px;
-      color: #8d6640;
-      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #d4a056;
     }
 
     .about-logo-subtitle {
-      font-family: 'BPG Nino Mtavruli', 'Sylfaen', Arial, sans-serif;
-      font-size: 12px;
-      color: #8d6640;
-      letter-spacing: 1px;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid #c49a6c;
-      font-style: italic;
-      text-align: center;
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: #d4a056;
+      opacity: 0.7;
+      margin-top: 15px;
     }
 
     @media (max-width: 768px) {
-      .about-logo-compass {
-        width: 150px;
-        height: 150px;
+      .about-logo-azomva {
+        font-size: 18px;
+        letter-spacing: 6px;
       }
-
+      
       .about-logo-main-text {
-        font-size: 28px;
-        letter-spacing: 2px;
+        font-size: 24px;
+        letter-spacing: 3px;
       }
 
       .about-logo-subtitle {
-        font-size: 9px;
-      }
-    }
-
-    .about-compass-outer {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: repeating-radial-gradient(circle, 
-        rgba(249, 246, 240, 0.6) 0px, 
-        rgba(249, 246, 240, 0.6) 2px, 
-        rgba(245, 237, 224, 0.5) 2px, 
-        rgba(245, 237, 224, 0.5) 4px);
-      border: 4px double #c49a6c;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2), inset 0 0 40px rgba(196, 154, 108, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .about-compass-ring {
-      position: absolute;
-      width: 155px;
-      height: 155px;
-      border: 2px dashed #d4a37380;
-      border-radius: 50%;
-    }
-
-    .about-tick {
-      position: absolute;
-      background: #333;
-      top: 50%;
-      left: 50%;
-      transform-origin: center;
-    }
-
-    .about-tick-main {
-      width: 3px;
-      height: 20px;
-      margin-left: -1.5px;
-    }
-
-    .about-tick-mid {
-      width: 2px;
-      height: 14px;
-      margin-left: -1px;
-    }
-
-    .about-tick-minor {
-      width: 1.5px;
-      height: 9px;
-      margin-left: -0.75px;
-    }
-
-    .about-tick:nth-child(1) { transform: translate(-50%, -50%) translateY(-86px); }
-    .about-tick:nth-child(2) { transform: translate(-50%, -50%) rotate(22.5deg) translateY(-86px); }
-    .about-tick:nth-child(3) { transform: translate(-50%, -50%) rotate(45deg) translateY(-86px); }
-    .about-tick:nth-child(4) { transform: translate(-50%, -50%) rotate(67.5deg) translateY(-86px); }
-    .about-tick:nth-child(5) { transform: translate(-50%, -50%) rotate(90deg) translateY(-86px); }
-    .about-tick:nth-child(6) { transform: translate(-50%, -50%) rotate(112.5deg) translateY(-86px); }
-    .about-tick:nth-child(7) { transform: translate(-50%, -50%) rotate(135deg) translateY(-86px); }
-    .about-tick:nth-child(8) { transform: translate(-50%, -50%) rotate(157.5deg) translateY(-86px); }
-    .about-tick:nth-child(9) { transform: translate(-50%, -50%) rotate(180deg) translateY(-86px); }
-    .about-tick:nth-child(10) { transform: translate(-50%, -50%) rotate(202.5deg) translateY(-86px); }
-    .about-tick:nth-child(11) { transform: translate(-50%, -50%) rotate(225deg) translateY(-86px); }
-    .about-tick:nth-child(12) { transform: translate(-50%, -50%) rotate(247.5deg) translateY(-86px); }
-    .about-tick:nth-child(13) { transform: translate(-50%, -50%) rotate(270deg) translateY(-86px); }
-    .about-tick:nth-child(14) { transform: translate(-50%, -50%) rotate(292.5deg) translateY(-86px); }
-    .about-tick:nth-child(15) { transform: translate(-50%, -50%) rotate(315deg) translateY(-86px); }
-    .about-tick:nth-child(16) { transform: translate(-50%, -50%) rotate(337.5deg) translateY(-86px); }
-
-    .about-n {
-      position: absolute;
-      top: -2px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Times New Roman', serif;
-      font-size: 70px;
-      font-weight: 900;
-      color: #8d6640;
-      text-shadow: 0 3px 6px rgba(0,0,0,0.3), 0 0 15px rgba(141, 102, 64, 0.4);
-      z-index: 20;
-    }
-
-    .about-cardinal {
-      position: absolute;
-      font-family: 'Times New Roman', serif;
-      font-size: 24px;
-      font-weight: 600;
-      color: #333;
-      text-shadow: 0 2px 4px rgba(255,255,255,0.8);
-      z-index: 15;
-    }
-
-    .about-cardinal-e { right: 4px; top: 50%; transform: translateY(-50%); }
-    .about-cardinal-s { bottom: 4px; left: 50%; transform: translateX(-50%); }
-    .about-cardinal-w { left: 4px; top: 50%; transform: translateY(-50%); }
-
-    .about-secondary {
-      position: absolute;
-      font-family: 'Times New Roman', serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: #999;
-      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
-      z-index: 15;
-    }
-
-    .about-secondary-ne { top: 30px; right: 30px; }
-    .about-secondary-se { bottom: 30px; right: 30px; }
-    .about-secondary-sw { bottom: 30px; left: 30px; }
-    .about-secondary-nw { top: 30px; left: 30px; }
-
-    .about-rose {
-      position: absolute;
-      width: 110px;
-      height: 110px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .about-petal {
-      position: absolute;
-      width: 44px;
-      height: 66px;
-      background: linear-gradient(to bottom, #d4a373, transparent);
-      opacity: 0.3;
-      top: 50%;
-      left: 50%;
-      transform-origin: 50% 100%;
-    }
-
-    .about-petal:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
-    .about-petal:nth-child(2) { transform: translate(-50%, -100%) rotate(45deg); }
-    .about-petal:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg); }
-    .about-petal:nth-child(4) { transform: translate(-50%, -100%) rotate(135deg); }
-    .about-petal:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); }
-    .about-petal:nth-child(6) { transform: translate(-50%, -100%) rotate(225deg); }
-    .about-petal:nth-child(7) { transform: translate(-50%, -100%) rotate(270deg); }
-    .about-petal:nth-child(8) { transform: translate(-50%, -100%) rotate(315deg); }
-
-    .about-needle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 0;
-      height: 0;
-      border-left: 13px solid transparent;
-      border-right: 13px solid transparent;
-      border-bottom: 77px solid #d4a373;
-      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
-      z-index: 8;
-    }
-
-    .about-needle-back {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(180deg);
-      width: 0;
-      height: 0;
-      border-left: 11px solid transparent;
-      border-right: 11px solid transparent;
-      border-bottom: 44px solid #999;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
-      opacity: 0.6;
-      z-index: 7;
-    }
-
-    .about-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 17px;
-      height: 17px;
-      background: #8d6640;
-      border-radius: 50%;
-      z-index: 10;
-    }
-
-    @media (max-width: 768px) {
-      .about-logo-compass {
-        width: 150px;
-        height: 150px;
-      }
-
-      .about-compass-ring {
-        width: 116px;
-        height: 116px;
-      }
-
-      .about-tick-main {
-        width: 2.25px;
-        height: 15px;
-        margin-left: -1.125px;
-      }
-
-      .about-tick-mid {
-        width: 1.5px;
-        height: 10.5px;
-        margin-left: -0.75px;
-      }
-
-      .about-tick-minor {
-        width: 1.125px;
-        height: 6.75px;
-        margin-left: -0.5625px;
-      }
-
-      .about-tick:nth-child(1) { transform: translate(-50%, -50%) translateY(-64.5px); }
-      .about-tick:nth-child(2) { transform: translate(-50%, -50%) rotate(22.5deg) translateY(-64.5px); }
-      .about-tick:nth-child(3) { transform: translate(-50%, -50%) rotate(45deg) translateY(-64.5px); }
-      .about-tick:nth-child(4) { transform: translate(-50%, -50%) rotate(67.5deg) translateY(-64.5px); }
-      .about-tick:nth-child(5) { transform: translate(-50%, -50%) rotate(90deg) translateY(-64.5px); }
-      .about-tick:nth-child(6) { transform: translate(-50%, -50%) rotate(112.5deg) translateY(-64.5px); }
-      .about-tick:nth-child(7) { transform: translate(-50%, -50%) rotate(135deg) translateY(-64.5px); }
-      .about-tick:nth-child(8) { transform: translate(-50%, -50%) rotate(157.5deg) translateY(-64.5px); }
-      .about-tick:nth-child(9) { transform: translate(-50%, -50%) rotate(180deg) translateY(-64.5px); }
-      .about-tick:nth-child(10) { transform: translate(-50%, -50%) rotate(202.5deg) translateY(-64.5px); }
-      .about-tick:nth-child(11) { transform: translate(-50%, -50%) rotate(225deg) translateY(-64.5px); }
-      .about-tick:nth-child(12) { transform: translate(-50%, -50%) rotate(247.5deg) translateY(-64.5px); }
-      .about-tick:nth-child(13) { transform: translate(-50%, -50%) rotate(270deg) translateY(-64.5px); }
-      .about-tick:nth-child(14) { transform: translate(-50%, -50%) rotate(292.5deg) translateY(-64.5px); }
-      .about-tick:nth-child(15) { transform: translate(-50%, -50%) rotate(315deg) translateY(-64.5px); }
-      .about-tick:nth-child(16) { transform: translate(-50%, -50%) rotate(337.5deg) translateY(-64.5px); }
-
-      .about-n {
-        font-size: 52.5px;
-      }
-
-      .about-cardinal {
-        font-size: 18px;
-      }
-
-      .about-cardinal-e { right: 3px; }
-      .about-cardinal-s { bottom: 3px; }
-      .about-cardinal-w { left: 3px; }
-
-      .about-secondary {
-        font-size: 12px;
-      }
-
-      .about-secondary-ne { top: 22.5px; right: 22.5px; }
-      .about-secondary-se { bottom: 22.5px; right: 22.5px; }
-      .about-secondary-sw { bottom: 22.5px; left: 22.5px; }
-      .about-secondary-nw { top: 22.5px; left: 22.5px; }
-
-      .about-rose {
-        width: 82.5px;
-        height: 82.5px;
-      }
-
-      .about-petal {
-        width: 33px;
-        height: 49.5px;
-      }
-
-      .about-needle {
-        border-left: 9.75px solid transparent;
-        border-right: 9.75px solid transparent;
-        border-bottom: 57.75px solid #d4a373;
-      }
-
-      .about-needle-back {
-        border-left: 8.25px solid transparent;
-        border-right: 8.25px solid transparent;
-        border-bottom: 33px solid #999;
-      }
-
-      .about-center {
-        width: 12.75px;
-        height: 12.75px;
+        font-size: 11px;
+        letter-spacing: 3px;
       }
     }
 
@@ -931,56 +461,43 @@
     <header class="glass-strong fixed top-0 inset-x-0 z-50 shadow-lg">
       <nav class="max-w-[1200px] mx-auto px-4 py-4 flex items-center justify-between gap-3">
         <div class="header-logo-container">
-          <div class="header-logo-compass">
-            <div class="header-compass-outer">
-              <div class="header-compass-ring"></div>
-              
-              <div class="header-tick header-tick-main"></div>
-              <div class="header-tick header-tick-minor"></div>
-              <div class="header-tick header-tick-mid"></div>
-              <div class="header-tick header-tick-minor"></div>
-              <div class="header-tick header-tick-main"></div>
-              <div class="header-tick header-tick-minor"></div>
-              <div class="header-tick header-tick-mid"></div>
-              <div class="header-tick header-tick-minor"></div>
-              <div class="header-tick header-tick-main"></div>
-              <div class="header-tick header-tick-minor"></div>
-              <div class="header-tick header-tick-mid"></div>
-              <div class="header-tick header-tick-minor"></div>
-              <div class="header-tick header-tick-main"></div>
-              <div class="header-tick header-tick-minor"></div>
-              <div class="header-tick header-tick-mid"></div>
-              <div class="header-tick header-tick-minor"></div>
-              
-              <div class="header-n">N</div>
-              <div class="header-cardinal header-cardinal-e">E</div>
-              <div class="header-cardinal header-cardinal-s">S</div>
-              <div class="header-cardinal header-cardinal-w">W</div>
-              
-              <div class="header-secondary header-secondary-ne">NE</div>
-              <div class="header-secondary header-secondary-se">SE</div>
-              <div class="header-secondary header-secondary-sw">SW</div>
-              <div class="header-secondary header-secondary-nw">NW</div>
-              
-              <div class="header-rose">
-                <div class="header-petal"></div>
-                <div class="header-petal"></div>
-                <div class="header-petal"></div>
-                <div class="header-petal"></div>
-                <div class="header-petal"></div>
-                <div class="header-petal"></div>
-                <div class="header-petal"></div>
-                <div class="header-petal"></div>
-              </div>
-              
-              <div class="header-needle"></div>
-              <div class="header-needle-back"></div>
-              <div class="header-center"></div>
-            </div>
-          </div>
+          <svg width="50" height="46" viewBox="0 0 65 60">
+            <defs>
+              <linearGradient id="headerMGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#d4a056" />
+                <stop offset="100%" stop-color="#b8863d" />
+              </linearGradient>
+            </defs>
+            <polygon points="5,55 5,5 17,5 32.5,30 48,5 60,5 60,55 50,55 50,20 32.5,48 15,20 15,55" fill="url(#headerMGrad)"/>
+            <polygon points="5,55 5,5 17,5 32.5,30 48,5 60,5 60,55 50,55 50,20 32.5,48 15,20 15,55" fill="none" stroke="#8b6428" stroke-width="2"/>
+            <line x1="5" y1="8" x2="11" y2="8" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="5" y1="12" x2="8" y2="12" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="5" y1="16" x2="8" y2="16" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="5" y1="20" x2="11" y2="20" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="5" y1="24" x2="8" y2="24" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="5" y1="28" x2="8" y2="28" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="5" y1="32" x2="11" y2="32" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="5" y1="36" x2="8" y2="36" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="5" y1="40" x2="8" y2="40" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="5" y1="44" x2="11" y2="44" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="5" y1="48" x2="8" y2="48" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="5" y1="52" x2="8" y2="52" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="8" x2="54" y2="8" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="60" y1="12" x2="57" y2="12" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="16" x2="57" y2="16" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="20" x2="54" y2="20" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="60" y1="24" x2="57" y2="24" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="28" x2="57" y2="28" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="32" x2="54" y2="32" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="60" y1="36" x2="57" y2="36" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="40" x2="57" y2="40" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="44" x2="54" y2="44" stroke="#8b6428" stroke-width="1.5"/>
+            <line x1="60" y1="48" x2="57" y2="48" stroke="#8b6428" stroke-width="0.75"/>
+            <line x1="60" y1="52" x2="57" y2="52" stroke="#8b6428" stroke-width="0.75"/>
+          </svg>
           <div class="header-logo-text-group">
-            <div class="header-logo-main-text">NAXAZI.COM</div>
-            <div class="header-logo-subtitle">გეოდეზია • არქიტექტურა • გეოლოგია</div>
+            <span class="header-logo-azomva">აზომვა</span>
+            <span class="header-logo-main-text">EASURE.GE</span>
           </div>
         </div>
 
@@ -1392,56 +909,44 @@
       </div>
       
       <div class="about-logo-container">
-        <div class="about-logo-compass">
-          <div class="about-compass-outer">
-            <div class="about-compass-ring"></div>
-            
-            <div class="about-tick about-tick-main"></div>
-            <div class="about-tick about-tick-minor"></div>
-            <div class="about-tick about-tick-mid"></div>
-            <div class="about-tick about-tick-minor"></div>
-            <div class="about-tick about-tick-main"></div>
-            <div class="about-tick about-tick-minor"></div>
-            <div class="about-tick about-tick-mid"></div>
-            <div class="about-tick about-tick-minor"></div>
-            <div class="about-tick about-tick-main"></div>
-            <div class="about-tick about-tick-minor"></div>
-            <div class="about-tick about-tick-mid"></div>
-            <div class="about-tick about-tick-minor"></div>
-            <div class="about-tick about-tick-main"></div>
-            <div class="about-tick about-tick-minor"></div>
-            <div class="about-tick about-tick-mid"></div>
-            <div class="about-tick about-tick-minor"></div>
-            
-            <div class="about-n">N</div>
-            <div class="about-cardinal about-cardinal-e">E</div>
-            <div class="about-cardinal about-cardinal-s">S</div>
-            <div class="about-cardinal about-cardinal-w">W</div>
-            
-            <div class="about-secondary about-secondary-ne">NE</div>
-            <div class="about-secondary about-secondary-se">SE</div>
-            <div class="about-secondary about-secondary-sw">SW</div>
-            <div class="about-secondary about-secondary-nw">NW</div>
-            
-            <div class="about-rose">
-              <div class="about-petal"></div>
-              <div class="about-petal"></div>
-              <div class="about-petal"></div>
-              <div class="about-petal"></div>
-              <div class="about-petal"></div>
-              <div class="about-petal"></div>
-              <div class="about-petal"></div>
-              <div class="about-petal"></div>
-            </div>
-            
-            <div class="about-needle"></div>
-            <div class="about-needle-back"></div>
-            <div class="about-center"></div>
-          </div>
-        </div>
+        <svg width="120" height="110" viewBox="0 0 65 60">
+          <defs>
+            <linearGradient id="aboutMGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#d4a056" />
+              <stop offset="100%" stop-color="#b8863d" />
+            </linearGradient>
+          </defs>
+          <polygon points="5,55 5,5 17,5 32.5,30 48,5 60,5 60,55 50,55 50,20 32.5,48 15,20 15,55" fill="url(#aboutMGrad)"/>
+          <polygon points="5,55 5,5 17,5 32.5,30 48,5 60,5 60,55 50,55 50,20 32.5,48 15,20 15,55" fill="none" stroke="#8b6428" stroke-width="2"/>
+          <line x1="5" y1="8" x2="11" y2="8" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="5" y1="12" x2="8" y2="12" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="5" y1="16" x2="8" y2="16" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="5" y1="20" x2="11" y2="20" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="5" y1="24" x2="8" y2="24" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="5" y1="28" x2="8" y2="28" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="5" y1="32" x2="11" y2="32" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="5" y1="36" x2="8" y2="36" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="5" y1="40" x2="8" y2="40" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="5" y1="44" x2="11" y2="44" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="5" y1="48" x2="8" y2="48" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="5" y1="52" x2="8" y2="52" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="8" x2="54" y2="8" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="60" y1="12" x2="57" y2="12" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="16" x2="57" y2="16" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="20" x2="54" y2="20" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="60" y1="24" x2="57" y2="24" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="28" x2="57" y2="28" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="32" x2="54" y2="32" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="60" y1="36" x2="57" y2="36" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="40" x2="57" y2="40" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="44" x2="54" y2="44" stroke="#8b6428" stroke-width="1.5"/>
+          <line x1="60" y1="48" x2="57" y2="48" stroke="#8b6428" stroke-width="0.75"/>
+          <line x1="60" y1="52" x2="57" y2="52" stroke="#8b6428" stroke-width="0.75"/>
+        </svg>
         <div class="about-logo-text-group">
-          <div class="about-logo-main-text">NAXAZI.COM</div>
-          <div class="about-logo-subtitle">გეოდეზია • არქიტექტურა • გეოლოგია</div>
+          <span class="about-logo-azomva">აზომვა</span>
+          <span class="about-logo-main-text">EASURE.GE</span>
+          <span class="about-logo-subtitle">გეოდეზია • არქიტექტურა • გეოლოგია</span>
         </div>
       </div>
     </div>
@@ -1465,7 +970,7 @@
             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
           </svg>
           <h3 class="text-[#d4a373] font-semibold mb-1">ელ-ფოსტა</h3>
-          <p class="text-[#1a1a1a] font-bold text-lg">ramazsabauri@gmail.com</p>
+          <p class="text-[#1a1a1a] font-bold text-lg"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0c2d1ddd1cac3d1d2d1c5c2d9f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</a></p>
         </div>
 
         <div class="text-center bg-white rounded-xl p-8 shadow-lg lg:col-auto">
@@ -1601,7 +1106,7 @@
   </div>
 </section>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.getElementById('whatsappForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
@@ -1695,12 +1200,4 @@ ${message}`;
       mobileMenu.classList.toggle('active');
     });
 
-    document.addEventListener('click', (e) => {
-      if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-        hamburgerBtn.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      }
-    });
-  </script>
-</body>
-</html>
+    document.addEventListener('click', (e) =
